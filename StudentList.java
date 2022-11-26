@@ -58,10 +58,10 @@ public class StudentList {
 				BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("students.txt", true));
 				String inputString = args[0].substring(1);
 				Date newdDate = new Date();
-				String df = "dd/mm/yyyy-hh:mm:ss a";
-				DateFormat dateFormat = new SimpleDateFormat(df);
-				String fd = dateFormat.format(newdDate);
-				bufferedWriter.write(", " + inputString + "\nList last updated on " + fd);
+				
+				DateFormat dateFormat = new SimpleDateFormat("dd/mm/yyyy-hh:mm:ss a");
+				
+				bufferedWriter.write(", " + inputString + "\nList last updated on " + dateFormat.format(newdDate));
 				bufferedWriter.close();
 			} catch (Exception e) {
 			}
