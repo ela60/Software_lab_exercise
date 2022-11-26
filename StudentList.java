@@ -8,36 +8,35 @@ public class StudentList {
 		if(args[0].equals("a")) {
 			System.out.println("Loading data ...");			
 			try {
-			BufferedReader s = new BufferedReader(
-					new InputStreamReader(
-							new FileInputStream("students.txt"))); 
-			String r = s.readLine();
-			String i[] = r.split(",");			
-			for(String j : i) { System.out.println(j); }
+				BufferedReader s = new BufferedReader(new InputStreamReader(new FileInputStream("students.txt"))); 
+				String r = s.readLine();
+				String i[] = r.split(",");			
+				for(String j : i) 
+				{  
+					System.out.println(j); 
+
+			     }
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");
 		}
 		else if(args[0].equals("r")) 
 		{
 			System.out.println("Loading data ...");			
-			try {
-			BufferedReader s = new BufferedReader(
-					new InputStreamReader(
-							new FileInputStream("students.txt"))); 
-			String r = s.readLine();
-			
-		
-			String i[] = r.split(",");	
-			int y =  (int)((double)Math.random()*(int)i.length); 
-					System.out.println(i[y]);
-			} catch (Exception e){} 
+			try
+			 {
+				BufferedReader s = new BufferedReader(new InputStreamReader(new FileInputStream("students.txt"))); 
+				String r = s.readLine();
+				String i[] = r.split(",");	
+				int y =  (int)((double)Math.random()*(int)i.length); 
+				System.out.println(i[y]);
+			} 
+			catch (Exception e){} 
 			System.out.println("Data Loaded.");			
 		}
 		else if(args[0].contains("+")){
 			System.out.println("Loading data ...");			
 			try {
-			BufferedWriter s = new BufferedWriter(
-					new FileWriter("students.txt", true));
+			BufferedWriter s = new BufferedWriter(new FileWriter("students.txt", true));
 			String t = args[0].substring(1);
 	        Date d = new Date();
 	        String df = "dd/mm/yyyy-hh:mm:ss a";
@@ -53,18 +52,17 @@ public class StudentList {
 		{
 			System.out.println("Loading data ...");			
 			try {
-			BufferedReader s = new BufferedReader(
-					new InputStreamReader(
-							new FileInputStream("students.txt"))); 
+			BufferedReader s = new BufferedReader(new InputStreamReader(new FileInputStream("students.txt"))); 
 			String r = s.readLine();
 			String i[] = r.split(",");	
 			boolean done = false;
 			String t = args[0].substring(1);
 			for(int idx = 0; idx<i.length && !done; idx++) {
-				if(i[idx].equals(t)) {
+				if(i[idx].equals(t))
+				 {
 					System.out.println("We found it!");
 						done=true;
-				}
+				 }
 			}
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");				
@@ -73,9 +71,7 @@ public class StudentList {
 		{
 			System.out.println("Loading data ...");			
 			try {
-			BufferedReader s = new BufferedReader(
-					new InputStreamReader(
-							new FileInputStream("students.txt"))); 
+			BufferedReader s = new BufferedReader(new InputStreamReader(new FileInputStream("students.txt"))); 
 			String D = s.readLine();
 			char a[] = D.toCharArray();			
 			boolean in_word = false;
