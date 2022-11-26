@@ -73,12 +73,12 @@ public class StudentList {
 				BufferedReader bufferedReader = getBufferedReader();
 				String r = bufferedReader.readLine();
 				String i[] = r.split(",");
-				boolean done = false;
+				
 				String inpuString = args[0].substring(1);
-				for (int idx = 0; idx < i.length && !done; idx++) {
+				for (int idx = 0; idx < i.length ; idx++) {
 					if (i[idx].equals(inpuString)) {
 						System.out.println("We found it!");
-						done = true;
+						break;
 					}
 				}
 			} catch (Exception e) {
