@@ -88,21 +88,9 @@ public class StudentList {
 			System.out.println("Loading data ...");
 			try {
 				BufferedReader bufferedReader = getBufferedReader();
-				String newdate = bufferedReader.readLine();
-				char a[] = newdate.toCharArray();
-				boolean in_word = false;
-				int count = 0;
-				for (char c : a) {
-					if (c == ' ') {
-						if (!in_word) {
-							count++;
-							in_word = true;
-						} else {
-							in_word = false;
-						}
-					}
-				}
-				System.out.println(count + " word(s) found " + a.length);
+				String newsString= bufferedReader.readLine();
+				
+				System.out.println( newsString.split(", ").length + " word(s) found " );
 			} catch (Exception e) {
 			}
 			System.out.println("Data Loaded.");
