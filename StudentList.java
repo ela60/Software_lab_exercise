@@ -20,7 +20,11 @@ public class StudentList {
 	public static void main(String[] args) {
 
 		// Check arguments
-		if (args[0].equals(constants.inputfile1)) {
+		if ((args==null) || (args.length==0))
+		{
+			System.out.println("invalid arguments");
+		}
+		else if (args[0].equals(constants.inputfile1)) {
 			if (args.length != 1) {
 				System.out.println("please enter valid arg");
 			} else {
