@@ -3,6 +3,19 @@ import java.text.*;
 import java.util.*;
 
 public class StudentList {
+
+	public static BufferedReader getBufferedReader () {
+				try 
+				{
+					BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("students.txt")));
+					return bufferedReader;
+				}
+				catch(FileNotFoundException e)
+				{
+					e.printStackTrace();
+				}
+				return null;
+	}
 	public static void main(String[] args) {
 
 		// Check arguments
